@@ -43,7 +43,7 @@ function createCard(taskInfo, index) {
   }else if (taskInfo.tipo == "Normal"){
     span.classList.add("span-normal")
   }
-  
+
   return li;
 }
 
@@ -52,7 +52,7 @@ function renderElements(taskList) {
   htmlList.innerHTML = "";
 
   for (var count = 0; count < tasks.length; count++) {
-  let card = createCard(taskList[count]);
+  let card = createCard(taskList[count], count);
   htmlList.appendChild(card);
   }
 }
